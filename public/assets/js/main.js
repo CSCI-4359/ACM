@@ -52,11 +52,11 @@
 
 $(window).on("scroll", function() {
     if($(window).scrollTop()) {
-          $('nav').addClass('acm-blue');
+          $('nav').addClass('primary-color');
     }
 
     else {
-          $('nav').removeClass('acm-blue');
+          $('nav').removeClass('primary-color');
     }
 })
 

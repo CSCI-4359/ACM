@@ -1,0 +1,60 @@
+$primaryFont: Raleway;
+$secondaryFont: Helevicta;
+$tertiaryFont: sans-serif;
+
+body {
+    
+}
+
+
+/* General Page css */
+
+.page {
+  padding: 7.5em 0 3.75em 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.section-title h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  position: relative;
+  color: #00537d;
+}
+
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 7.5em;
+  height: 0.1em;
+  background: #ffffff;
+  bottom: 0.1em;
+  left: calc(50% - 3.75em);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 3.75em;
+  height: 0.25em;
+  background: #19b2ff;
+  bottom: 0;
+  left: calc(50% - 1.5em);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
