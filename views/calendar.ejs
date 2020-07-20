@@ -1,16 +1,19 @@
 <%- include('layouts/header.ejs') %>
 <%- include('layouts/navigation.ejs') %>
 
-<div class="container" data-aos="fade-up">
-    <div class="row section-title">
-                    <h2>Calendar</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit in iste officiis commodi quidem hic quas.</p>
-                </div>
+<div class="container" style="height: 6em;"></div>
+<div id="calendar" class="page container calendar section-bg">
+    <div class="section-title">
+        <h2>Calendar</h2>
+        <p>Find all of TAMUSA ACM's latest events!</p>
     </div>
-
-    <!-- Google Calendar Here -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%230085ca&amp;ctz=America%2FChicago&amp;src=dGFtdXNhLmFjbUBnbWFpbC5jb20&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043"
+                style="border:solid 1px #00537d; display: block; margin: 0 auto;" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
 </div>
 
 <%- include('layouts/footer.ejs') %>
