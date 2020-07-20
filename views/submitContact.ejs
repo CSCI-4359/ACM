@@ -1,0 +1,43 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+
+<div class="container" style="height: 6em;"></div>
+<div id="calendar" class="page container contact section-bg">
+    <div class="section-title">
+        <h2>Message Sent</h2>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Name:</p>   
+        </div>
+        <div class="col-3">
+            <p><%= contact.name %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Email:</p> 
+        </div>
+        <div class="col-3">
+            <p><%= contact.email %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Subject:</p> 
+        </div>
+        <div class="col-3">
+            <p><%= contact.subject %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Message:</p> 
+        </div>
+        <div class="col-3">
+            <p><%= contact.message %></p>
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer.ejs') %>

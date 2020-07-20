@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const Contact = require('../models/contact');
+
 
 const router = express.Router();
 
@@ -30,6 +32,16 @@ router.get('/blog', (req, res) => {
 
 router.get('/contact', (req, res) => {
     res.render('contact');
+});
+
+router.post('/submitContact', (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const subject = req.body.subject;
+    const message = req.body.message;
+    const contact = new Contact(name, email, subject, message);
+    contact.save();
+    res.render('submitContact', {contact: contact});
 });
 
 module.exports = router;
