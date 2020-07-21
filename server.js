@@ -3,8 +3,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const pagesRouter = require('./routes/pages');
 
-
-
 const app = express();
 
 app.set('view engine', 'ejs');

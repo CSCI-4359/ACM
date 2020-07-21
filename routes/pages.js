@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const Contact = require('../models/contact');
 
+const Contact = require('../models/contact');
 
 const router = express.Router();
 
