@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const Contact = require('../models/contact');
+const Article = require('../models/article');
 
 const router = express.Router();
 
@@ -39,9 +40,25 @@ router.post('/submitContact', (req, res) => {
     const email = req.body.email;
     const subject = req.body.subject;
     const message = req.body.message;
-    const contact = new Contact(name, email, subject, message);
-    contact.save();
-    res.render('submitContact', {contact: contact});
+    const contacts = new Contact(name, email, subject, message);
+    contacts.save();
+    res.render('submitContact', {contact: contacts});
+});
+
+router.get('/createArticle', (req, res) => {
+    res.render('createArticle');
+});
+
+router.post('/submitArticle', (req, res) => {
+    const title = req.body.title;
+    const date = new Date();
+    const content = req.body.content;
+    const categories = req.body.categories;
+    const mainImage = req.body.mainImage;
+    const tags = req.body.tags;
+    const articles = new Article(title, date, content, categories, mainImage, tags);
+    articles.save();
+    res.render('submitArticle', {article: articles});
 });
 
 module.exports = router;

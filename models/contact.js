@@ -5,7 +5,7 @@ class Contact {
         this.name = name;
         this.email = email;
         this.subject = subject;
-        this.comment = comment;
+        this.message = message;
     }
 
     save() {

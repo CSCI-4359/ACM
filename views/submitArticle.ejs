@@ -1,0 +1,50 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+
+<div class="container" style="height: 6em;"></div>
+<div id="calendar" class="page container contact section-bg">
+    <div class="section-title">
+        <h2>Article Posted</h2>
+    </div>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <p>Main Image</p>
+            <img src="/assets/img/blog/<%= article.mainImage %>" alt='article.title'> %>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Title:</p>   
+        </div>
+        <div class="col-3">
+            <p><%= article.title %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Content:</p> 
+        </div>
+        <div class="col-3">
+            <%= article.content %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Categories:</p> 
+        </div>
+        <div class="col-3">
+            <p><%= article.categories %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <p>Tags:</p> 
+        </div>
+        <div class="col-3">
+            <p><%= article.tags %></p>
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer.ejs') %>
