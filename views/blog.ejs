@@ -13,6 +13,7 @@
             <section class="row">
                 <!--Start slider news-->
                 <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
+                    
                     <div id="featured" class="carousel slide carousel" data-ride="carousel">
                         <!--dots navigate-->
                         <ol class="carousel-indicators top-indicator">
@@ -25,38 +26,41 @@
                         <!--carousel inner-->
                         <div class="carousel-inner">
                             <!--Item slider-->
-                            <div class="carousel-item active">
+                            <%  var counter = 1;
+                                for (let a of articles) { %>
+                            <div <% if(counter <= 1) { %> class="carousel-item active" <% } else { %> class="carousel-item" <% } %>>
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
                                     <div class="position-relative">
                                         <!--thumbnail img-->
                                         <div class="ratio_left-cover-1 image-wrapper">
-                                            <a href="https://github.com/TAMUSA-ACM/Git-GitHub-Workshop">
-                                                <img class="img-fluid w-100"
-                                                    src="/assets/img/blog/Git + GitHub.png"
-                                                    alt="Git and GitHub">
+                                            <a href="#">
+                                                <img class="img-fluid w-100" style="height: 29.4em; max-height: 29.4em;"
+                                                    src="/assets/img/blog/<%= a.mainImage %>"
+                                                    alt="<%= a.title %>">
                                             </a>
                                         </div>
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                                             <!--title-->
-                                            <a href="https://github.com/TAMUSA-ACM/Git-GitHub-Workshop">
-                                                <h2 class="h3 post-title text-white my-1">Git and GitHub</h2>
+                                            <a href="#">
+                                                <h2 class="h3 post-title text-white my-1"><%= a.title %></h2>
                                             </a>
                                             <!-- meta title -->
                                             <div class="news-meta">
                                                 <span class="news-author">by <a class="text-white font-weight-bold"
                                                         href="../category/author.html">Leonard Box</a></span>
-                                                <span class="news-date">May 20, 2020</span>
+                                                <span class="news-date"><%= a.date %></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!--Item slider-->
+                            <% counter++;
+                                } %>
+                            <!--Item sliders
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
                                     <div class="position-relative">
-                                        <!--thumbnail img-->
+                                        
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="https://medium.com/better-programming/how-to-stop-being-afraid-of-technical-interviews-b60b064ff003">
                                                 <img class="img-fluid w-100"
@@ -65,11 +69,11 @@
                                             </a>
                                         </div>
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                            <!--title-->
+                                            
                                             <a href="https://medium.com/better-programming/how-to-stop-being-afraid-of-technical-interviews-b60b064ff003">
                                                 <h2 class="h3 post-title text-white my-1">How To Stop Being Afraid of Technical Interviews</h2>
                                             </a>
-                                            <!-- meta title -->
+                                            
                                             <div class="news-meta">
                                                 <span class="news-author">by <a class="text-white font-weight-bold"
                                                         href="../category/author.html">Joey Colon</a></span>
@@ -80,11 +84,11 @@
                                 </div>
                             </div>
 
-                            <!--Item slider-->
+                            
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
                                     <div class="position-relative">
-                                        <!--thumbnail img-->
+                                        
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="https://github.com/TAMUSA-ACM/BootStrap-4-and-GitHub-Pages">
                                                 <img class="img-fluid w-100"
@@ -93,11 +97,11 @@
                                             </a>
                                         </div>
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                            <!--title-->
+                                            
                                             <a href="https://github.com/TAMUSA-ACM/BootStrap-4-and-GitHub-Pages">
                                                 <h2 class="h3 post-title text-white my-1">Learn Bootstrap 4</h2>
                                             </a>
-                                            <!-- meta title -->
+                                            
                                             <div class="news-meta">
                                                 <span class="news-author">by <a class="text-white font-weight-bold"
                                                         href="../category/author.html">Leonard Box</a></span>
@@ -108,11 +112,11 @@
                                 </div>
                             </div>
 
-                            <!--Item slider-->
+                           
                             <div class="carousel-item">
                                 <div class="card border-0 rounded-0 text-light overflow zoom">
                                     <div class="position-relative">
-                                        <!--thumbnail img-->
+                                        
                                         <div class="ratio_left-cover-1 image-wrapper">
                                             <a href="https://app.joinhandshake.com/events/518429">
                                                 <img class="img-fluid w-100"
@@ -121,11 +125,11 @@
                                             </a>
                                         </div>
                                         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-                                            <!--title-->
+                                            
                                             <a href="https://app.joinhandshake.com/events/518429">
                                                 <h2 class="h3 post-title text-white my-1">Virtual Externship with Accenture</h2>
                                             </a>
-                                            <!-- meta title -->
+                                            
                                             <div class="news-meta">
                                                 <span class="news-author">by <a class="text-white font-weight-bold"
                                                         href="../category/author.html">Mays Center</a></span>
@@ -135,7 +139,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--end item slider-->
+                            -->
                         </div>
                         <!--end carousel inner-->
                     </div>

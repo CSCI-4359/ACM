@@ -16,12 +16,16 @@
                         <h1 class="text-quaternary-color text-center"><%= a.title %></h1>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin: 1em;">
                     <div class="col-8 offset-2 img-article" style="background-image: url('/assets/img/blog/<%= a.mainImage %>');"></div>
                 </div>
                 <div class="row">
                     <div class="col-6 offset-3">
-                        <p><span class="text-tertiary-color"><%= a.date %></span> <%= a.categories %></p>
+                        <p><span class="text-tertiary-color"><%= a.date %></span><b>
+                            <% for (var i = 0; i < a.category.length; i++) { %>
+                                <%= a.category[i] %> 
+                            <% } %>
+                        </b></p>
                     </div>
                 </div>
                 <div class="row">
@@ -31,7 +35,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6 offset-3">
-                        <p><b>Tagged in: </b><span class="text-tertiary-color"><%= a.tags %></span></p>
+                        <p><b>Tagged in: </b><span class="text-tertiary-color"><em><%= a.tags %></em></span></p>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,23 @@ router.get('/calendar', (req, res) => {
 });
 
 router.get('/blog', (req, res) => {
-    res.render('blog', {title: 'Our Blog' });
+    const dateFormat = require('dateformat');
+    const date = dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM TT");
+    const article = new Article ({
+        title: req.body.title,
+        date: date,
+        content: req.body.content,
+        category: req.body.category,
+        mainImage: req.body.mainImage,
+        tags: req.body.tags
+    });
+    Article.find()
+    .sort({date: - 1})
+    .then(results => {
+        res.render('blog', {articles: results, title: 'Our Blog'});
+    })
+    .catch(err => console.log(err));
+ 
 });
 
 router.get('/contact', (req, res) => {
@@ -111,4 +127,16 @@ router.post('/submitArticle', (req, res) => {
 });
 */
 
+router.post('/submitMailingList', (req, res) => {
+    // Use schema model
+    const mailingList = new MailingList ({
+        email: req.body.email
+    });
+
+    mailingList.save()
+        .then(result => {
+            res.render('submitMailingList', {mailingList: result, title: 'Submitted Mailing List' }); 
+        })
+        .catch(err => console.log(err));
+});
 module.exports = router;
