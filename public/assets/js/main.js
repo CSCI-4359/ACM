@@ -26,9 +26,4 @@
     }
   })
 
-  // init AOS
-  $(window).on('scroll', function () {
-    aos_init();
-  });
-
 })(jQuery);

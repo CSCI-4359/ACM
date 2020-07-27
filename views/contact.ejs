@@ -9,7 +9,7 @@
 
     <div class="row">
 
-        <div class="col-lg-5 d-flex align-items-stretch">
+        <div class="col-lg-5 offset-1 d-flex align-items-stretch">
             <div class="info">
                 <div class="address">
                     <i class="fa fa-map-marked"></i>
@@ -35,33 +35,34 @@
 
         </div>
 
-        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+        <div class="col-lg-5 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="/submitContact" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="name">Your Name</label>
-                        <input type="text" class="form-control" name="name" data-rule="minlen:4"
-                            data-msg="Please enter at least 4 chars" required>
-                        <div class="validate"></div>
+                        <label for="firstName">Your First Name</label>
+                        <input type="text" class="form-control" name="firstName" id="firstName"
+                            placeholder="Please enter your first name" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="name">Your Email</label>
-                        <input type="email" class="form-control" name="email" data-rule="email"
-                            data-msg="Please enter a valid email" required>
-                        <div class="validate"></div>
+                        <label for="lasstName">Your Last Name</label>
+                        <input type="text" class="form-control" name="lastName" id="lastName"
+                            placeholder="Please enter your last name" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="name">Subject</label>
-                    <input type="text" class="form-control" name="subject" data-rule="minlen:4"
-                        data-msg="Please enter at least 8 chars of subject" required>
-                    <div class="validate"></div>
+                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" name="email"
+                            placeholder="Please enter a valid email" required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Message</label>
-                    <textarea class="form-control" name="message" rows="10" 
-                        data-msg="Please write something for us" required></textarea>
-                    <div class="validate"></div>
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject"
+                        placeholder="Please enter a subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="10" 
+                        placeholder="Please enter your message" required></textarea>
                 </div>
                 <div class="text-center"><button class="btn-learn-more">Send Message</button></div>
             </form>
@@ -69,5 +70,4 @@
     </div>
 </div>
 
-
-    <%- include('layouts/footer.ejs') %>
+<%- include('layouts/footer.ejs') %>

@@ -11,7 +11,8 @@ var articleSchema = new mongoose.Schema ({
         type: String
     },
     category: {
-        type: String
+        type: Array,
+        default: []
     },
     mainImage: {
         type: String

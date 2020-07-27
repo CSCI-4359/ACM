@@ -7,7 +7,7 @@ const Article = require('../models/article');
 
 const router = express.Router();
 
-router.get('/index', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index', {title: 'TAMUSA ACM Homepage' });
 });
 
@@ -38,7 +38,8 @@ router.get('/contact', (req, res) => {
 router.post('/submitContact', (req, res) => {
     // Use schema model
     const contact = new Contact ({
-        name: req.body.name,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         email: req.body.email,
         subject: req.body.subject,
         message: req.body.message
@@ -73,22 +74,29 @@ router.get('/createArticle', (req, res) => {
 
 router.post('/submitArticle', (req, res) => {
     // Use schema model
+    const dateFormat = require('dateformat');
+    const date = dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM TT");
     const article = new Article ({
         title: req.body.title,
-        date: new Date(),
+        date: date,
         content: req.body.content,
-        categories: req.body.categories,
+        category: req.body.category,
         mainImage: req.body.mainImage,
         tags: req.body.tags
     });
-
-    article.save()
+    Article.collection.insertOne(article)
         .then(result => {
-            res.render('submitArticle', {article: result}, {title: 'Submitted Article' }); 
+            console.log('Insertion Success!'); 
         })
         .catch(err => console.log(err));
-});
+    Article.find()
+        .sort({date: -1})
+        .then(results => {
+            res.render('submitArticle', {articles: results, title: 'Submitted Article'});
+        })
+        .catch(err => console.log(err));
 
+})
 
     /*
     const title = req.body.title;

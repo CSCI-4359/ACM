@@ -1,48 +1,41 @@
 <%- include('layouts/header.ejs') %>
 <%- include('layouts/navigation.ejs') %>
 
-<div class="container" style="height: 6em;"></div>
+<div class="container" style="height: 6em;" onload="extractContent()"></div>
 <div id="calendar" class="page container contact section-bg">
     <div class="section-title">
         <h2>Article Posted</h2>
     </div>
     <div class="row">
-        <div class="col-6 offset-3">
-            <p>Main Image</p>
-            <img src="/assets/img/blog/<%= article.mainImage %>" alt='article.title'> %>
-            
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3 offset-3">
-            <p>Title:</p>   
-        </div>
-        <div class="col-3">
-            <p><%= article.title %></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3 offset-3">
-            <p>Content:</p> 
-        </div>
-        <div class="col-3">
-            <%= article.content %>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3 offset-3">
-            <p>Categories:</p> 
-        </div>
-        <div class="col-3">
-            <p><%= article.categories %></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3 offset-3">
-            <p>Tags:</p> 
-        </div>
-        <div class="col-3">
-            <p><%= article.tags %></p>
+        <div class="col-12">
+
+            <% for (let a of articles) { %>
+            <div class="page container">
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <h1 class="text-quaternary-color text-center"><%= a.title %></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 offset-2 img-article" style="background-image: url('/assets/img/blog/<%= a.mainImage %>');"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <p><span class="text-tertiary-color"><%= a.date %></span> <%= a.categories %></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-3">
+                       <%- a.content %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <p><b>Tagged in: </b><span class="text-tertiary-color"><%= a.tags %></span></p>
+                    </div>
+                </div>
+            </div>
+            <% } %>
         </div>
     </div>
 </div>

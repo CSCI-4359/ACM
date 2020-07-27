@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <label for="titleInput">Title</label>
+                            <label for="titleInput"><b>Title</b></label>
                             <input type='text' name='title' class="form-control" id="titleInput"
                                 placeholder="Title*" required>
                         </div>
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <label for="contentInput">Content</label>
+                            <label for="contentInput"><b>Content</b></label>
                             <textarea name="content" id="contentInput" cols="77" rows="10" placeholder=" Content*" required></textarea>
                         </div>
                     </div>
@@ -45,39 +45,39 @@
                         <label class="form-check-label text-quaternary-color" for="categories"><h6>Categories</h6></label>
                         <hr>
                         <div class="form-group form-check" id="categories">
-                            <input type="checkbox" class="form-check-input" name="category" id="eventInput"  />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="eventInput"  />
                             <label class="form-check-label" for="eventInput">Event</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="newsInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="newsInput" />
                             <label class="form-check-label" for="newsInput">News</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="hackathonInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="hackathonInput" />
                             <label class="form-check-label" for="hackathonInput">Hackathon</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="workshopInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="workshopInput" />
                             <label class="form-check-label" for="workshopInput">Workshop</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="projectInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="projectInput" />
                             <label class="form-check-label" for="projectInput">Project</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="meetingInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="meetingInput" />
                             <label class="form-check-label" for="meetingInput">Meeting</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="dataStructuresInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="dataStructuresInput" />
                             <label class="form-check-label" for="dataStructuresInput">Data Structures</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="algorithmsInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="algorithmsInput" />
                             <label class="form-check-label" for="algorithmsInput">Algorithms</label>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name="category" id="cyberSecurityInput" />
+                            <input type="checkbox" class="form-check-input" name="category[]" id="cyberSecurityInput" />
                             <label class="form-check-label" for="cyberSecurityInput">Cyber Security</label>
                         </div>
                     </div>
@@ -103,8 +103,11 @@
                 </div>
                 <div class="row" style="height: 3em;"></div>
                 <div class="row">
-                    <div class="col-4 offset-4 text-center">
+                    <div class="col-4 offset-2 text-center">
                         <button class="btn-learn-more">Submit</button>
+                    </div>
+                    <div class="col-4 text-center">
+                        <button class="btn-learn-more" type="reset">Reset</button>
                     </div>
                 </div>       
             </form>
