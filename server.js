@@ -14,7 +14,7 @@ app.use('/', pagesRouter);
 
 mongoose.connect('mongodb://localhost:27017/ContactDB', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        app.listen(3000, () => {
+        app.listen(3600, () => {
             console.log('MongoDB connected. Express server is running')
     });
     })
