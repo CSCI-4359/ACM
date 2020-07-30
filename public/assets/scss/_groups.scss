@@ -1,6 +1,6 @@
 /* Team Page */
 
-.team .member {
+.groups .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -9,32 +9,33 @@
   transition: 0.5s;
 }
 
-.team .member .pic {
+.groups .member .pic {
   overflow: hidden;
-  width: 180px;
+  
   border-radius: 50%;
 }
 
-.team .member .pic img {
+.groups .member .pic img {
+  max-width: 3em !important;
   transition: ease-in-out 0.3s;
 }
 
-.team .member:hover {
+.groups .member:hover {
   transform: translateY(-10px);
 }
 
-.team .member .member-info {
+.groups .member .member-info {
   padding-left: 30px;
 }
 
-.team .member h4 {
+.groups .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
   color: #37517e;
 }
 
-.team .member span {
+.groups .member span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -42,7 +43,7 @@
   font-weight: 500;
 }
 
-.team .member span::after {
+.groups .member span::after {
   content: '';
   position: absolute;
   display: block;
@@ -53,19 +54,19 @@
   left: 0;
 }
 
-.team .member p {
+.groups .member p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
 
-.team .member .social {
+.groups .member .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.team .member .social a {
+.groups .member .social a {
   transition: ease-in-out 0.3s;
   display: flex;
   align-items: center;
@@ -76,24 +77,27 @@
   background: #eff2f8;
 }
 
-.team .member .social a i {
+.groups .member .social a i {
   color: #37517e;
   font-size: 16px;
   margin: 0 2px;
 }
 
-.team .member .social a:hover {
+.groups .member .social a:hover {
   background: #47b2e4;
 }
 
-.team .member .social a:hover i {
+.groups .member .social a:hover i {
   color: #fff;
 }
 
-.team .member .social a+a {
+.groups .member .social a+a {
   margin-left: 8px;
 }
 
+.align-items-start {
+  align-self: start;
+}
 
 
 .b-0 {

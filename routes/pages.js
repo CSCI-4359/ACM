@@ -112,7 +112,7 @@ router.post('/submitArticle', (req, res) => {
         })
         .catch(err => console.log(err));
 
-})
+});
 
     /*
     const title = req.body.title;

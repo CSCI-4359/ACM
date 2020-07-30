@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "5f1ba03633ab591608e079b9"
+  },
+  "category": [
+    "Event",
+    "Workshop"
+  ],
+  "title": "HashMaps",
+  "date": "Friday, July 24th, 2020, 10:00 PM",
+  "content": "<h3 class=\"text-center\">Important Features of HashMap</h3>\r\n<p>To access a value one must know its key. HashMap is known as HashMap because it uses a technique called Hashing. Hashing is a technique of converting a large String to small String that represents the same String. A shorter value helps in indexing and faster searches. HashSet also uses HashMap internally.</p>\r\n<p>Few important features of HashMap are:</p>\r\n<ul>\r\n<li>HashMap is a part of java.util package.</li>\r\n<li>HashMap extends an abstract class AbstractMap which also provides an incomplete implementation of Map interface.</li>\r\n<li>It also implements Cloneable and Serializable interface. K and V in the above definition represent Key and Value respectively.</li>\r\n<li>HashMap doesn&rsquo;t allow duplicate keys but allows duplicate values. That means A single key can&rsquo;t contain more than 1 value but more than 1 key can contain a single value.</li>\r\n<li>HashMap allows null key also but only once and multiple null values.</li>\r\n<li>This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time. It is roughly similar to HashTable but is unsynchronized.</li>\r\n</ul>\r\n<h3 class=\"text-center\">Internal Structure of HashMap</h3>\r\n<p>Internally HashMap contains an array of Node and a node is represented as a class which contains 4 fields:</p>\r\n<ol>\r\n<li>int hash</li>\r\n<li>K key</li>\r\n<li>V value</li>\r\n<li>Node next</li>\r\n</ol>\r\n<p>It can be seen that node is containing a reference of its own object. So it&rsquo;s a linked list. HashMap:</p>\r\n<p><img class=\"img-thumbnail text-center\" style=\"display: block;\" src=\"assets/img/blog/array.png\" alt=\"Node\" /></p>\r\n<p>Node:</p>\r\n<p><img id=\"img\" class=\"img-thumbnail text-center\" style=\"display: block;\" src=\"assets/img/blog/hashMap.png\" alt=\"Node\" /> <strong>Performance of HashMap</strong></p>",
+  "mainImage": "How HashMap works in Java 5.jpg",
+  "tags": "#tamusaacm #tamusawicys"
+},{
+  "_id": {
+    "$oid": "5f1e0ee347bb702cc4237c94"
+  },
+  "category": [
+    "Event",
+    "News"
+  ],
+  "title": "Virtual Externship with Accenture",
+  "date": "Sunday, July 26th, 2020, 6:16 PM",
+  "content": "<h2>Juniors and Seniors- You are invited to the first of its kind virtual experience!</h2><p>The Virtual Externship Series with Accenture is a great opportunity to connect with company professionals in a virtual space.</p><p>You will gain insights on the company and learn valuable technical skill for your career and professional development.</p><p>Event scheduled from 1:30pm-4:30pm CST Breaks included, Q&amp;A, and closing survey at the end. Schedule subject to change, we encourage you to plan on attending the entire time.</p><p>Be prepared to interact, use your camera, participate in discussions, and ask questions.</p><p>Once you click this Handshake Join Event, you will receive an email (to your preferred Handshake email) for further registration details.</p><p>If you have questions or need accommodations for this event, please contact Mysti Frazier at mysti.frazier@utsa.edu.</p>",
+  "mainImage": "accenture.png",
+  "tags": "#tamusaacm #tamusawicys"
+},{
+  "_id": {
+    "$oid": "5f1f223d94197939ca1965a3"
+  },
+  "category": [
+    "on",
+    "on"
+  ],
+  "title": "Singly Linked List",
+  "date": "Monday, July 27th, 2020, 1:51 PM",
+  "content": "<p>A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers as shown in the below image:</p>\r\n<p><img class=\"text-center\" style=\"display: block;\" src=\"assets/img/blog/Linkedlist.png\" alt=\"Linked List\" /></p>\r\n<p>In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.</p>",
+  "mainImage": "singly_linkedlist.png",
+  "tags": "#tamusaacm #tamusawicys"
+}]
